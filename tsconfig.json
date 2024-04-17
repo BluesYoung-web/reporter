@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true, // 开启生成声明文件
+    "declarationDir": "./dist", // 指定声明文件的输出目录
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*", "env.d.ts"]
+}
