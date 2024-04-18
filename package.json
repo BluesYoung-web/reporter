@@ -2,6 +2,23 @@
   "name": "@bluesyoung/reporter",
   "type": "module",
   "version": "0.0.1",
+  "description": "数据打点上报SDK",
+  "author": "BluesYoung-web",
+  "license": "MIT",
+  "homepage": "https://github.com/BluesYoung-web/reporter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BluesYoung-web/reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BluesYoung-web/reporter/issues"
+  },
+  "keywords": [
+    "data",
+    "reporter",
+    "report",
+    "page view"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -15,6 +32,9 @@
   "jsdelivr": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "browser": "dist/index.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build && tsup",
     "lint": "eslint .",
