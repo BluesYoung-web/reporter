@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.0.2...v0.0.3)
+
+### 🚀 Enhancements
+
+- 🚀 精简配置 & 扩充 ts 类型 ([b2b2b5b](https://github.com/BluesYoung-web/reporter/commit/b2b2b5b))
+
+### ❤️ Contributors
+
+- 张扬 <bluesyoung_web@163.com>
+
 ## v0.0.2
 
 [compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.0.1...v0.0.2)
