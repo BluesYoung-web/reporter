@@ -20,7 +20,7 @@ var YoungReporter = class {
     }).withTag("YoungReporter");
     this.logger.info("init", config);
     this.http = useHttp({
-      baseURL: serverUrl,
+      lazyBaseURL: () => serverUrl,
       timeout: -1,
       loading: {
         start: () => this.logger.info("...start req..."),
@@ -34,7 +34,8 @@ var YoungReporter = class {
         this.logger.error("request error: ", err);
       },
       headers: {
-        getCommonHeaders: () => {
+        getCommonHeaders: (req) => {
+          this.logger.log("url: ", req.url);
           const t = Math.floor(Date.now() / 1e3).toString();
           return {
             t,
@@ -60,7 +61,7 @@ var YoungReporter = class {
   login(id) {
     this.#account_id = id;
   }
-  loginout() {
+  logout() {
     this.#account_id = "";
   }
   track(event_id, args) {

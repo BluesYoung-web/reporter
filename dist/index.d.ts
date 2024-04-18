@@ -20,7 +20,7 @@ declare class YoungReporter {
     constructor(config: ReporterConfig);
     private mergeProps;
     login(id: string | number): void;
-    loginout(): void;
+    logout(): void;
     track(event_id: string | number, args: Record<string, any>): void;
 }
 

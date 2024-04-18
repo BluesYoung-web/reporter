@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2024-04-17 16:32:00
- * @LastEditTime: 2024-04-18 09:10:22
+ * @LastEditTime: 2024-04-18 10:19:22
  * @Description:
  * @LastEditors: zhangyang
  */
@@ -50,7 +50,7 @@ export default class YoungReporter {
     this.logger.info('init', config)
 
     this.http = useHttp({
-      baseURL: serverUrl,
+      lazyBaseURL: () => serverUrl,
       timeout: -1,
       loading: {
         start: () => this.logger.info('...start req...'),
@@ -64,7 +64,9 @@ export default class YoungReporter {
         this.logger.error('request error: ', err)
       },
       headers: {
-        getCommonHeaders: () => {
+        getCommonHeaders: (req) => {
+          this.logger.log('url: ', req.url)
+
           const t = Math.floor(Date.now() / 1000).toString()
 
           return {
@@ -94,7 +96,7 @@ export default class YoungReporter {
     this.#account_id = id
   }
 
-  loginout() {
+  logout() {
     this.#account_id = ''
   }
 
