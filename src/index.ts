@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2024-04-17 16:32:00
- * @LastEditTime: 2024-04-17 19:53:37
+ * @LastEditTime: 2024-04-18 09:10:22
  * @Description:
  * @LastEditors: zhangyang
  */
@@ -30,7 +30,7 @@ export interface ReporterConfig {
 
 export default class YoungReporter {
   #device_id = getFingerprint()
-  #account_id = ''
+  #account_id: string | number = ''
 
   private logger: ConsolaInstance
   private http: ReturnType<typeof useHttp>
@@ -84,14 +84,13 @@ export default class YoungReporter {
       '#device_id': this.#device_id,
       '#account_id': this.#account_id,
       '#flush_time': Date.now(),
-      '#ua': ua,
-      '#ua_parser': UAParser(ua),
+      '#ua': UAParser(ua),
       '#sdk_version': __VERSION__,
       'properties': props,
     }
   }
 
-  login(id: string) {
+  login(id: string | number) {
     this.#account_id = id
   }
 
@@ -99,7 +98,7 @@ export default class YoungReporter {
     this.#account_id = ''
   }
 
-  track(event_id: string, args: Record<string, any>) {
+  track(event_id: string | number, args: Record<string, any>) {
     const trackArgs = this.mergeProps(args, 'track')
     this.logger.info('event_id: ', event_id, 'track: ', trackArgs)
     this.http.authReq({
