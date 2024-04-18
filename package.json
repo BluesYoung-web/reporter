@@ -37,6 +37,7 @@
   ],
   "scripts": {
     "build": "vite build && tsup",
+    "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -51,6 +52,7 @@
     "@types/node": "20",
     "@types/ua-parser-js": "^0.7.39",
     "eslint": "^9.0.0",
+    "happy-dom": "^14.7.1",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.0.2",

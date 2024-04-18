@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-19 10:48:36
- * @LastEditTime: 2024-04-18 08:10:04
+ * @LastEditTime: 2024-04-18 16:44:55
  * @Description:
  */
 /// <reference types="vitest" />
@@ -30,5 +30,9 @@ export default defineConfig({
 
   define: {
     __VERSION__: JSON.stringify(version),
+  },
+
+  test: {
+    environment: 'happy-dom',
   },
 })
