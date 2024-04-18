@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.1.0
+
+[compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.0.3...v0.1.0)
+
+### 🚀 Enhancements
+
+- ⚠️  🚀 log req url & typo loginout -> logout ([f4a3ff4](https://github.com/BluesYoung-web/reporter/commit/f4a3ff4))
+
+### 📖 Documentation
+
+- 📖 update readme ([37ac589](https://github.com/BluesYoung-web/reporter/commit/37ac589))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  🚀 log req url & typo loginout -> logout ([f4a3ff4](https://github.com/BluesYoung-web/reporter/commit/f4a3ff4))
+
+### ❤️ Contributors
+
+- 张扬 <bluesyoung_web@163.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.0.2...v0.0.3)
