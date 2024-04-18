@@ -1,7 +1,7 @@
 {
   "name": "@bluesyoung/reporter",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "数据打点上报SDK",
   "author": "BluesYoung-web",
   "license": "MIT",
