@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.1.0...v0.2.0)
+
+### 🚀 Enhancements
+
+- 🚀 定时上报 ([cf31538](https://github.com/BluesYoung-web/reporter/commit/cf31538))
+
+### 📖 Documentation
+
+- 📖 update readme ([0420b8a](https://github.com/BluesYoung-web/reporter/commit/0420b8a))
+
+### ✅ Tests
+
+- ✅ add test case ([ae84c6d](https://github.com/BluesYoung-web/reporter/commit/ae84c6d))
+
+### ❤️ Contributors
+
+- 张扬 <bluesyoung_web@163.com>
+
 ## v0.1.0
 
 [compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.0.3...v0.1.0)
