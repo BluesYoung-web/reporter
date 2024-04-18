@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2022-10-19 10:48:36
- * @LastEditTime: 2024-04-17 19:52:45
+ * @LastEditTime: 2024-04-18 08:10:04
  * @Description:
  */
 /// <reference types="vitest" />
@@ -22,7 +22,8 @@ export default defineConfig({
       fileName: format => `index.${format}.js`,
       name: 'YoungReporter',
     },
-    sourcemap: true,
+    minify: true,
+    sourcemap: false,
     target: ['chrome58'],
     cssTarget: ['chrome58'],
   },
