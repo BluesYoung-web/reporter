@@ -14,9 +14,6 @@ dependencies:
   consola:
     specifier: ^3.2.3
     version: 3.2.3
-  std-env:
-    specifier: ^3.7.0
-    version: 3.7.0
   ua-parser-js:
     specifier: ^1.0.37
     version: 1.0.37
@@ -3622,6 +3619,7 @@ packages:
 
   /std-env@3.7.0:
     resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}
+    dev: true
 
   /string-argv@0.3.2:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
