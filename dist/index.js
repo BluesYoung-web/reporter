@@ -2,7 +2,7 @@
 import { getFingerprint, md5 } from "@bluesyoung/utils";
 import { useHttp } from "@bluesyoung/http";
 import UAParser from "ua-parser-js";
-import consola from "consola";
+import consola, { LogLevels } from "consola";
 var YoungReporter = class {
   #device_id = "";
   #account_id = "";
@@ -18,7 +18,7 @@ var YoungReporter = class {
       initDeviceId = true
     } = config;
     this.#logger = consola.create({
-      level: debug ? void 0 : -1
+      level: debug ? LogLevels.verbose : LogLevels.warn
     }).withTag("YoungReporter");
     initDeviceId && this.setDeviceId();
     this.#logger.info("init", config);
@@ -120,7 +120,7 @@ var YoungReporter = class {
       }
     };
     intervalFn();
-    this.#timer = setInterval(intervalFn, timeGap / 6 * 1e3);
+    this.#timer = setInterval(intervalFn, timeGap / 10 * 1e3);
   }
 };
 export {

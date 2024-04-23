@@ -1,7 +1,7 @@
 /*
  * @Author: zhangyang
  * @Date: 2024-04-17 16:32:00
- * @LastEditTime: 2024-04-18 16:32:48
+ * @LastEditTime: 2024-04-23 09:25:22
  * @Description:
  * @LastEditors: zhangyang
  */
@@ -9,7 +9,7 @@ import { getFingerprint, md5 } from '@bluesyoung/utils'
 import { useHttp } from '@bluesyoung/http'
 import UAParser from 'ua-parser-js'
 import type { ConsolaInstance } from 'consola'
-import consola from 'consola'
+import consola, { LogLevels } from 'consola'
 
 export interface ReporterConfig {
   /**
@@ -53,7 +53,7 @@ export default class YoungReporter {
     } = config
 
     this.#logger = consola.create({
-      level: debug ? undefined : -1,
+      level: debug ? LogLevels.verbose : LogLevels.warn,
     }).withTag('YoungReporter')
 
     initDeviceId && this.setDeviceId()
@@ -177,6 +177,6 @@ export default class YoungReporter {
     }
 
     intervalFn()
-    this.#timer = setInterval(intervalFn, timeGap / 6 * 1e3)
+    this.#timer = setInterval(intervalFn, (timeGap / 10) * 1e3)
   }
 }

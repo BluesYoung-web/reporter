@@ -3244,7 +3244,7 @@ class Qo {
       initDeviceId: a = !0
     } = t;
     K(this, P, Xo.create({
-      level: i ? void 0 : -1
+      level: i ? D.verbose : D.warn
     }).withTag("YoungReporter")), a && this.setDeviceId(), N(this, P).info("init", t), K(this, le, Mo({
       lazyBaseURL: () => r,
       timeout: -1,
@@ -3316,7 +3316,7 @@ class Qo {
       const i = t.get(), a = Math.floor(Date.now() / 1e3);
       i && a - i < o ? N(this, P).warn("flush report fail, time to short, real-gap: %ss, need-gap: %ss", a - i, o) : (t.set(a), r(), N(this, P).log("flush report", a));
     };
-    n(), K(this, Z, setInterval(n, o / 6 * 1e3));
+    n(), K(this, Z, setInterval(n, o / 10 * 1e3));
   }
 }
 ae = new WeakMap(), X = new WeakMap(), P = new WeakMap(), le = new WeakMap(), Z = new WeakMap(), Te = new WeakSet(), ir = function(t, r = "track") {
@@ -3327,7 +3327,7 @@ ae = new WeakMap(), X = new WeakMap(), P = new WeakMap(), le = new WeakMap(), Z 
     "#account_id": N(this, X),
     "#flush_time": Date.now(),
     "#ua": Ho(o),
-    "#sdk_version": "0.2.0",
+    "#sdk_version": "0.2.1",
     properties: t
   };
 };
