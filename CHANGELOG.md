@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.2.1
+
+[compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.2.0...v0.2.1)
+
+### 🏡 Chore
+
+- 🏡 日志等级调整 + 定时器间隔调整 ([95b907d](https://github.com/BluesYoung-web/reporter/commit/95b907d))
+
+### ❤️ Contributors
+
+- 张扬 <bluesyoung_web@163.com>
+
 ## v0.2.0
 
 [compare changes](https://github.com/BluesYoung-web/reporter/compare/v0.1.0...v0.2.0)
